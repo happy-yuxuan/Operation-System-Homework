@@ -12,7 +12,7 @@ main(int argc, char *argv[])
 	int 	BUFFSIZE = atoi(argv[1]);	// 将字符串转成整数在stdlib中
 	// assert( fabs(BUFFSIZE - (int)BUFFSIZE) <= 1e-8 );
 	// char	buf[BUFFSIZE];
-	char *buf = (char *)malloc(BUFFSIZE)
+	char *buf = (char *)malloc(BUFFSIZE);
 	
 	while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) > 0)
 		if (write(STDOUT_FILENO, buf, n) != n)
